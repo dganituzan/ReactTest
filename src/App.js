@@ -31,15 +31,26 @@ class App extends Component {
   }
 
   render() {
+
+    const styleButton ={
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
     return (
       <div className="App">
        <h1>hi im a react app </h1>
-       <button onClick= {()=>this.switchNameHandler('arrow func')}>switch name</button>
+       <button
+         style ={styleButton}
+         onClick= {()=>this.switchNameHandler('arrow func')}>switch name</button>
        <Person 
         name={this.state.persons[0].name} 
         age= {this.state.persons[0].age}
         click= {this.switchNameHandler.bind(this,'with bind')}>
-        heyyyyyyyyyyy caful 4 </Person>
+        test children </Person>
        <Person 
         name={this.state.persons[1].name} 
         age= {this.state.persons[1].age}
